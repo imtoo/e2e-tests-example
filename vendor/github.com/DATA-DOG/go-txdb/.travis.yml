@@ -1,0 +1,20 @@
+language: go
+go:
+  # - 1.3.x - mysql driver does not support
+  # - 1.4 - mysql driver does not support
+  - 1.5.x
+  - 1.6.x
+  - 1.7.x
+  - 1.8.x
+  - 1.9.x
+
+services: mysql
+
+install:
+  - go get github.com/go-sql-driver/mysql
+
+script:
+  - make db
+  - go vet
+  - test -z "$(go fmt ./...)" # fail if not formatted properly
+  - go test -race

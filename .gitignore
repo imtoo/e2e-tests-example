@@ -1,0 +1,13 @@
+.DS_Store
+.idea
+
+# Ignore app binaries
+e2e-tests-example
+
+logfile
+
+# Ignore custom .env
+.env
+
+# Test coverage files
+cp.out

@@ -1,0 +1,34 @@
+[metadata.heroku]
+  root-package = "github.com/imtoo/e2e-tests-example"
+  install = [
+    "."
+  ]
+  ensure = "true"
+
+[prune]
+  go-tests = true
+  unused-packages = true
+
+[[constraint]]
+  name = "github.com/rs/cors"
+  version = "1.4.0"
+
+[[constraint]]
+  name = "github.com/stretchr/testify"
+  version = "1.2.2"
+
+[[constraint]]
+  name = "github.com/jinzhu/gorm"
+  version = "1.9.1"
+
+[[constraint]]
+  name = "syreclabs.com/go/faker"
+  version = "2.0.0"
+
+[[constraint]]
+  name = "github.com/joho/godotenv"
+  version = "1.2.0"
+
+[[constraint]]
+  name = "github.com/DATA-DOG/go-txdb"
+  version = "0.1.0"
